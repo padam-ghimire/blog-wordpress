@@ -1,5 +1,5 @@
 const menuIcon = document.getElementById("menu-icon")
-const slideoutMeu = document.getElementById("slideout-menu")
+const slideoutMenu = document.getElementById("slideout-menu")
 const searchIcon = document.getElementById("search-icon")
 const searchBox = document.getElementById("searchbox")
 
@@ -10,5 +10,16 @@ searchIcon.addEventListener('click',function(){
     }else{
         searchBox.style.top='72px'
         searchBox.style.pointerEvents='auto'
+    }
+})
+
+menuIcon.addEventListener('click',function(){
+    if(slideoutMenu.style.opacity=='1'){
+        slideoutMenu.style.opacity='0'
+        console.log('ok')
+        slideoutMenu.pointerEvents='none'
+    }else{
+        slideoutMenu.style.opacity='1'
+        slideoutMenu.pointerEvents='auto'
     }
 })
